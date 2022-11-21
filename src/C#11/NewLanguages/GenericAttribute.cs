@@ -1,6 +1,12 @@
-﻿namespace NewLanguages
+﻿namespace NewLanguages;
+
+public class GenericAttribute<T> : Attribute
 {
-    internal class GenericAttribute
-    {
-    }
+
+}
+
+public class UseAttribute
+{
+    [GenericAttribute<string>()]
+    public string Method() => default;
 }
